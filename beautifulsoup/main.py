@@ -9,7 +9,7 @@ def find_jobs():
     # print(html_text)
     soup = BeautifulSoup(html_text,'lxml')
     jobs=soup.find_all('li',class_ = "clearfix job-bx wht-shd-bx")
-    #print(job)
+    
     for index,job in enumerate(jobs):
         publish_date = job.find('span', class_="sim-posted").span.text
         if "few" in publish_date:
